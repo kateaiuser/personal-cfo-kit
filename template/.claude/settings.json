@@ -1,0 +1,59 @@
+{
+  "disableAutoMode": "disable",
+  "disableClaudeAiConnectors": true,
+  "enableAllProjectMcpServers": false,
+  "enableArtifact": false,
+  "feedbackDrafts": "off",
+  "env": {
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+    "DISABLE_FEEDBACK_COMMAND": "1"
+  },
+  "permissions": {
+    "defaultMode": "default",
+    "disableAutoMode": "disable",
+    "deny": [
+      "mcp__*",
+      "WebFetch",
+      "WebSearch",
+      "PushNotification",
+      "SendUserFile",
+      "SendMessage",
+      "RemoteTrigger",
+      "ArtifactData",
+      "ArtifactComments",
+      "Edit(/inbox/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.config/**)",
+      "Read(~/.netrc)",
+      "Read(~/.mcp.json)",
+      "Read(~/.claude.json)",
+      "Read(~/Library/Keychains/**)",
+      "Bash(git *)",
+      "Bash(*git push*)",
+      "Bash(gh *)",
+      "Bash(*curl *)",
+      "Bash(*wget *)",
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(rsync *)",
+      "Bash(*osascript*)",
+      "Bash(open http*)",
+      "Bash(rm *)",
+      "Bash(rmdir *)",
+      "Bash(*rm -rf*)",
+      "Bash(*rm -r *)",
+      "Bash(*xargs rm*)",
+      "Bash(*find * -delete*)"
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": ["~/"],
+      "allowRead": [".", "~/Library/Python"],
+      "denyWrite": ["./inbox"]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Личные финансовые данные никогда не коммитим.
+# Правила привязаны к корню репозитория, шаблон в template/ они не трогают.
+/inbox/
+/ledger/
+/plan/
+/tax/
+/.claude/
+*.pdf
+*.xlsx
+settings.local.json
+.DS_Store
